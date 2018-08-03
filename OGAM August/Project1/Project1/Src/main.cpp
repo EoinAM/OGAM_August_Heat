@@ -16,6 +16,7 @@
 
 int main(int, char* arg[])
 {
+
 	Game game;
 
 	game.run();

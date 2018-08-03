@@ -4,6 +4,8 @@ static double const MS_PER_UPDATE = 10.0F;
 Game::Game()
 	: m_window(sf::VideoMode(GlobalSettings::s_Width,GlobalSettings::s_Height, 32), "One Game A Month", sf::Style::Default)
 {
+	
+	m_controller.connect();
 	m_window.setVerticalSyncEnabled(true);
 }
 
@@ -53,10 +55,33 @@ void Game::processGameEvents(sf::Event & t_event)
 
 void Game::update(double t_dt)
 {
+	if (m_controller.isConnected())
+	{
+		m_controller.update();
+		std::cout << "connected" << std::endl;
+	}
+
+	switch (m_currentScreen)
+	{
+	case GameState::MAINMENU:
+		break;
+	case GameState::OPTIONS:
+		break;
+	case GameState::PLAYING:
+		break;
+	case GameState::ENDSCREE:
+		break;
+	default:
+		break;
+	}
 }
 
 void Game::render()
 {
 	m_window.clear(sf::Color::Blue);
 	m_window.display();
+}
+
+void Game::loadResources()
+{
 }

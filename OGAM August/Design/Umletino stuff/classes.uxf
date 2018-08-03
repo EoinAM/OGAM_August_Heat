@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>195</y>
+      <w>315</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>_Platforms_
+--
+_Variable_
+isMeltable
+isFlammable
+isDrawn
+
+_Function_
+Melt()
+Freeze()
+Move()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>195</x>
+      <y>195</y>
+      <w>315</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>_Player_
+--
+_Enums_
+ Fire / Ice
+ Dead / Alive
+
+_Variables_
+Sprite
+Texture
+Size
+Colour
+Weight
+
+_Functions_
+Walk()
+Run()
+Jump()
+Shoot()
+Die()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>825</x>
+      <y>195</y>
+      <w>315</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>_Tile_
+--
+_Variable_
+Sprite
+Texture
+
+_Function_
+Freeze()
+Melt()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>195</y>
+      <w>315</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>_Projectile_
+--
+_Enums_
+Fire / Ice
+
+_Variables_
+Size
+Speed
+isDrawn
+isColliding
+
+_Functions_
+Move()
+CollisionDetect()
+Die()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

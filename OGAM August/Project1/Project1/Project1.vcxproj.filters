@@ -13,21 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Player Files">
+      <UniqueIdentifier>{0d8cbfa5-a38d-4db9-a133-3e4ce7f8ba5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\World Files">
+      <UniqueIdentifier>{d5b485e9-5522-4ed6-8f64-f0b9197ebe24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy Files">
+      <UniqueIdentifier>{64159abf-25d8-425b-a942-cd859d931203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player Files">
+      <UniqueIdentifier>{c82a4ed2-9233-4cfe-ba6a-8d408bab2904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\World Files">
+      <UniqueIdentifier>{55633944-befa-4c59-9f37-285e54439c94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemy Files">
+      <UniqueIdentifier>{3cab4346-a375-4f9b-830a-40336494f62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc FIles">
+      <UniqueIdentifier>{4c320ca6-cfa6-4278-b214-1e7b1ddcf5cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc Files">
+      <UniqueIdentifier>{d482a408-46cc-410c-a97c-f29081108744}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Global.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="Src\Player.cpp">
+      <Filter>Source Files\Player Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\main.cpp">
+      <Filter>Source Files\Misc FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Xbox360Controller.cpp">
+      <Filter>Source Files\Misc FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game.cpp">
+      <Filter>Source Files\Misc FIles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="Include\Player.h">
+      <Filter>Header Files\Player Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Global.h">
+      <Filter>Header Files\Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Xbox360Controller.h">
+      <Filter>Header Files\Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Game.h">
+      <Filter>Header Files\Misc Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
