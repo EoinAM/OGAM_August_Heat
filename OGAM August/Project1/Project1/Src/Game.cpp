@@ -2,7 +2,8 @@
 static double const MS_PER_UPDATE = 10.0F;
 
 Game::Game()
-	: m_window(sf::VideoMode(GlobalSettings::s_Width,GlobalSettings::s_Height, 32), "One Game A Month", sf::Style::Default)
+	: m_window(sf::VideoMode(GlobalSettings::s_Width,GlobalSettings::s_Height, 32), "One Game A Month", sf::Style::Default),
+	m_player(sf::Vector2f(50.0f,50.0f), sf::Vector2f(10.0f,400.0f), m_controller)
 {
 	
 	m_controller.connect();
@@ -22,7 +23,7 @@ void Game::run()
 	{
 		sf::Time dt = clock.restart();
 
-		lag += dt.asMilliseconds();
+		lag += dt.asSeconds();
 		processEvents();
 
 		while (lag >= MS_PER_UPDATE)
@@ -58,7 +59,6 @@ void Game::update(double t_dt)
 	if (m_controller.isConnected())
 	{
 		m_controller.update();
-		std::cout << "connected" << std::endl;
 	}
 
 	switch (m_currentScreen)
@@ -68,6 +68,7 @@ void Game::update(double t_dt)
 	case GameState::OPTIONS:
 		break;
 	case GameState::PLAYING:
+		m_player.update(t_dt);
 		break;
 	case GameState::ENDSCREE:
 		break;
@@ -79,6 +80,7 @@ void Game::update(double t_dt)
 void Game::render()
 {
 	m_window.clear(sf::Color::Blue);
+	m_player.render(m_window);
 	m_window.display();
 }
 

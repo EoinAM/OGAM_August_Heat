@@ -255,8 +255,8 @@ void Xbox360Controller::buttonCheck()
 			m_currentState.RightThumbStick = (sf::Vector2f(0, 0));
 		}
 
-		if (sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::X) > 15 || sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::X) < -15
-			|| sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::Y) > 15 || sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::Y) < -15) //Left Thumb stick move
+		if (sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::X) > thumbstickThreshold || sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::X) < -(thumbstickThreshold)
+			|| sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::Y) > thumbstickThreshold || sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::Y) < -(thumbstickThreshold)) //Left Thumb stick move
 		{
 			m_currentState.LeftThumbStick.x = sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::X);
 			m_currentState.LeftThumbStick.y = sf::Joystick::getAxisPosition(sf_Joystick_Index, sf::Joystick::Axis::Y);

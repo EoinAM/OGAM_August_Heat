@@ -2,6 +2,7 @@
 #define GAME
 
 #include "Global.h"
+#include "Player.h"
 
 enum class GameState
 {
@@ -33,9 +34,12 @@ public:
 	GameState m_currentScreen{ GameState::PLAYING };
 	Xbox360Controller m_controller;
 
+	const double GRAVITY{ 9.8 };
+
 	//protected variables
 protected:
 	sf::RenderWindow m_window;
+	Player m_player;
 	
 };
 
