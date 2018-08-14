@@ -54,6 +54,9 @@
     <ClCompile Include="Src\Global.cpp">
       <Filter>Source Files\Misc FIles</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Platform.cpp">
+      <Filter>Source Files\World Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Player.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Include\Game.h">
       <Filter>Header Files\Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Platform.h">
+      <Filter>Header Files\World Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

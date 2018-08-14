@@ -16,11 +16,13 @@ class Player
 {
 	//Public Functions
 public:
-	Player(const sf::Vector2f t_size, const sf::Vector2f t_pos, Xbox360Controller& t_controller);
+	Player(const sf::Vector2f , const sf::Vector2f , Xbox360Controller& ); // Size, Position, Controller
 	~Player();
 
 	void update(double t_dt);
 	void setTexture(sf::Texture& t_texture);
+	sf::Vector2f const getPosition();
+	sf::RectangleShape const getBody();
 	void render(sf::RenderWindow & t_window);
 	//Private Functions
 protected:
@@ -29,6 +31,7 @@ protected:
 	void run();
 	void die();
 
+	void borderCheck();
 	//Public variables
 public:
 
@@ -39,7 +42,7 @@ protected:
 
 	sf::Vector2f m_preJumpPosition;
 	sf::Vector2f m_startVelocity;
-	sf::Vector2f m_velocity{ 1.0f, 100.0f };
+	sf::Vector2f m_velocity{ 1.0f, .5f };
 	sf::Vector2f m_position{ 0,0 };
 	sf::Vector2f m_size{ 0,0 };
 	

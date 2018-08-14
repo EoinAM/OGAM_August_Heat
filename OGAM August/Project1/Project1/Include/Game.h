@@ -33,13 +33,15 @@ protected:
 public:
 	GameState m_currentScreen{ GameState::PLAYING };
 	Xbox360Controller m_controller;
-
+	GameState m_previousScreen{ m_currentScreen };
 	const double GRAVITY{ 9.8 };
 
 	//protected variables
 protected:
 	sf::RenderWindow m_window;
+	sf::View m_followPlayerView;
 	Player m_player;
+	
 	
 };
 

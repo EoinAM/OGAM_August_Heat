@@ -3,10 +3,10 @@ static double const MS_PER_UPDATE = 10.0F;
 
 Game::Game()
 	: m_window(sf::VideoMode(GlobalSettings::s_Width,GlobalSettings::s_Height, 32), "One Game A Month", sf::Style::Default),
-	m_player(sf::Vector2f(50.0f,50.0f), sf::Vector2f(10.0f,400.0f), m_controller)
+	m_player(sf::Vector2f(50.0f,150.0f), sf::Vector2f(10.0f,800.0f), m_controller) //Size, Position, Controller
 {
-	
 	m_controller.connect();
+	m_window.setView(m_followPlayerView);
 	m_window.setVerticalSyncEnabled(true);
 }
 
@@ -69,6 +69,8 @@ void Game::update(double t_dt)
 		break;
 	case GameState::PLAYING:
 		m_player.update(t_dt);
+		m_followPlayerView.setCenter(m_player.getPosition().x, 0);
+		
 		break;
 	case GameState::ENDSCREE:
 		break;

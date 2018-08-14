@@ -1,6 +1,6 @@
 #include "Global.h"
 
-double GlobalSettings::s_Grav = 0.5;
+double GlobalSettings::s_Grav = .0001;
 
 void GlobalSettings::applyGrav(sf::Vector2f &t_vel, double t_dt)
 {
